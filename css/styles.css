@@ -363,6 +363,12 @@ ul {
   justify-content: space-between;
 }
 
+.clients-icon {
+  width: 170px;
+  height: 90px;
+  fill: red;
+}
+
 /* Footer */
 
 .footer-section {
