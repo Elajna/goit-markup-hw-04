@@ -347,6 +347,15 @@ ul {
   text-align: center;
 }
 
+.social-list {
+  display: flex;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .social-list .link {
   color: var(--primary-text-color);
 }
@@ -361,12 +370,6 @@ ul {
 .clients {
   display: flex;
   justify-content: space-between;
-}
-
-.clients-icon {
-  width: 170px;
-  height: 90px;
-  fill: red;
 }
 
 /* Footer */
