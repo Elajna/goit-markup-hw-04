@@ -378,12 +378,11 @@ ul {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--primary-text-color);
+  fill: #afb1b8;
 }
 
-.social-icon:hover,
-.social-icon:focus {
-  color: var(--primary-white-color);
+.social-icon:hover {
+  fill: var(--primary-white-color);
 }
 
 .social-list .link {
