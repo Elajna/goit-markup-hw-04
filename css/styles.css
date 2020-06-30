@@ -367,10 +367,13 @@ ul {
   margin: 0;
   padding: 0;
   border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: var(--background-accent-color);
 }
 
-.social-list .social-button:hover {
-  color: var(--accent-color);
+.social-list .social-button:hover,
+.social-list .social-button:focus {
+  background-color: #2196f3;
 }
 
 .social-icon {
@@ -379,7 +382,8 @@ ul {
   fill: var(--primary-text-color);
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
   color: var(--primary-white-color);
 }
 
