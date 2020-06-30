@@ -454,11 +454,13 @@ ul {
 .logo-item.five {
   width: 59px;
   height: 47px;
+  margin: 55px, 22px;
 }
 
 .logo-item.six {
   width: 88px;
   height: 45px;
+  margin: 40px, 22px;
 }
 
 /* Footer */
