@@ -366,11 +366,21 @@ ul {
   height: 44px;
   margin: 0;
   padding: 0;
+  border-radius: 50%;
+}
+
+.social-list .social-button:hover {
+  color: var(--accent-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
+  fill: var(--primary-text-color);
+}
+
+.social-icon:hover {
+  color: var(--primary-white-color);
 }
 
 .social-list .link {
