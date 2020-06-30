@@ -353,6 +353,11 @@ ul {
   margin: 0;
   outline: 1px solid black;
   list-style: none;
+  justify-content: center;
+}
+
+.social-list .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-list .social-button {
