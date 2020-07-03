@@ -124,14 +124,18 @@ ul {
   color: var(--accent-color);
 }
 
+.address .link:hover .icon-envelope {
+  fill: var(--accent-color);
+}
+
+/* .icon-envelope:hover {
+  fill: var(--accent-color);
+} */
+
 .icon-envelope {
   width: 16px;
   height: 11px;
   fill: var(--primary-text-color);
-}
-
-.icon-envelope:hover {
-  fill: var(--accent-color);
 }
 
 /* .address .icon-envelope::before {
@@ -149,7 +153,7 @@ ul {
   fill: var(--primary-text-color);
 }
 
-.icon-phone:hover {
+.address .link:hover .icon-phone {
   fill: var(--accent-color);
 }
 
@@ -407,9 +411,13 @@ ul {
   fill: #afb1b8;
 }
 
-.social-icon:hover {
+.social-list .link:hover .social-icon {
   fill: var(--primary-white-color);
 }
+
+/* .social-icon:hover {
+  fill: var(--primary-white-color);
+} */
 
 /* clients */
 
