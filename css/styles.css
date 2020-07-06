@@ -7,7 +7,6 @@
 }
 
 body {
-  padding-bottom: 16px;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
 
@@ -67,6 +66,10 @@ ul {
   margin-left: 85px;
 }
 
+.site-nav .item {
+  position: relative;
+}
+
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
@@ -91,6 +94,20 @@ ul {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.site-nav .link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* address */
@@ -127,10 +144,6 @@ ul {
 .address .link:hover .icon-envelope {
   fill: var(--accent-color);
 }
-
-/* .icon-envelope:hover {
-  fill: var(--accent-color);
-} */
 
 .icon-envelope {
   width: 16px;
@@ -176,6 +189,7 @@ ul {
   margin-bottom: 94px;
   padding-top: 200px;
   padding-bottom: 200px;
+
   text-align: center;
   background-color: rgba(47, 48, 58, 80%);
   background-image: linear-gradient(
@@ -202,6 +216,9 @@ ul {
 }
 
 .hero-button {
+  /* position: relative;
+  display: flex; */
+
   /* display: inline-block; */
 
   min-width: 200px;
@@ -219,7 +236,53 @@ ul {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-weight: bold;
+  /* overflow: hidden; */
 }
+
+/* вариант анимации на иконках. для себя. в бтн закоментены нужные значения для этого свойства */
+
+/* .hero-button:hover,
+   .hero-button:focus {
+  background-color: seagreen;
+}
+
+.hero-button::after {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+
+  margin-left: 10px;
+
+  transition: 250ms linear;
+  background-image: url(../img/instagram.svg);
+  background-size: contain;
+}
+
+.hero-button::before {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+
+  background-image: url(../img/twitter.svg);
+  background-size: contain;
+
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  transform: translateY(calc(-50% + 40px));
+
+  transition: 250ms linear;
+}
+
+.hero-button:hover::before {
+  transform: translateY(-50%);
+}
+
+.hero-button:hover::after {
+  transform: translateY(-40px);
+} */
 
 /* section */
 
@@ -313,7 +376,20 @@ ul {
   margin-right: 30px;
 }
 
+.work .item {
+  position: relative;
+}
+
 .work .text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 0;
   margin-bottom: 0;
   color: var(--primary-white-color);
@@ -322,7 +398,6 @@ ul {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.1;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -440,6 +515,10 @@ ul {
   border-color: var(--accent-color);
 }
 
+.client-logo:hover .logo-item {
+  fill: var(--accent-color);
+}
+
 .logo-item {
   width: 44px;
   height: 49px;
@@ -448,10 +527,6 @@ ul {
   margin-top: 20px;
   margin-bottom: 20px;
   fill: #afb1b8;
-}
-
-.logo-item:hover {
-  fill: var(--accent-color);
 }
 
 .logo-item.four {
@@ -596,13 +671,12 @@ ul {
 }
 
 .button {
-  display: inline-block;
+  display: flex;
   border: 1px solid var(--primary-text-color);
   border-radius: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-left: 16px;
+
+  align-items: center;
 
   min-width: 358px;
   height: 50px;
@@ -612,14 +686,13 @@ ul {
 }
 
 .button.primary {
-  /* display: inline-block; */
+  display: flex;
   border-radius: 4px;
   padding: 11px 28px;
 
   min-width: 200px;
   height: 50px;
-  left: 1185px;
-  top: 2764px;
+  vertical-align: middle;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -719,7 +792,7 @@ ul {
 }
 
 .examples-item:nth-child(3n) {
-  margin: 0;
+  margin-right: 0;
 }
 
 .examples-item:nth-last-child(-n + 3) {
